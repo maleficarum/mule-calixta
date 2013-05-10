@@ -33,14 +33,14 @@ To send SMS's to multiple destinations:
 
 Include maleficarum mvn repo :
 
-<repository>
-        <id>maleficarum</id>
-        <url>https://raw.github.com/maleficarum/maven/master/</url>
-        <releases>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-        </releases>
-    </repository>
+	<repository>
+        	<id>maleficarum</id>
+        	<url>https://raw.github.com/maleficarum/maven/master/</url>
+       		<releases>
+            		<enabled>true</enabled>
+            		<updatePolicy>always</updatePolicy>
+        	</releases>
+    	</repository>
 
 Add dependency :
 
