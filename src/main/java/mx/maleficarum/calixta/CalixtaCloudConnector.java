@@ -3,17 +3,33 @@
  */
 package mx.maleficarum.calixta;
 
+import com.auronix.calixta.sms.SMSGateway;
 import org.mule.tools.cloudconnect.annotations.Connector;
 import org.mule.tools.cloudconnect.annotations.Operation;
 
+/**
+ * Sends SMS using Calixta (calixta.com.mx) service
+ *
+ * @author maleficarum (http://maleficarum.mx)
+ */
 @Connector(namespacePrefix="calixta")
-public class CalixtaCloudConnector
-{
-    /*
-     * The following is a sample operation
-     */
+public class CalixtaCloudConnector {
+
+	private SMSGateway gateway;
+
+	public CalixtaCloudConnector() {
+		gateway = new SMSGateway();
+	}
+
     @Operation
-    public void myOperation()
-    {
+    public Object send(String destination, String message) {
+		Object payload = null;
+		try {
+			payload = gateway.sendMessage(destination,message);
+		} catch(Exception e) {
+			payload = e.getLocalizedMessage();
+			e.printStackTrace();
+		}
+		return payload;
     }
 }
