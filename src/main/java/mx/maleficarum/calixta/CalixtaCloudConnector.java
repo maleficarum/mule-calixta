@@ -7,6 +7,9 @@ import com.auronix.calixta.sms.SMSGateway;
 import org.mule.tools.cloudconnect.annotations.Connector;
 import org.mule.tools.cloudconnect.annotations.Operation;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Sends SMS using Calixta (calixta.com.mx) service
  *
@@ -23,11 +26,15 @@ public class CalixtaCloudConnector {
 
     @Operation
     public Object send(String destination, String text) {
-		Object payload = null;
+		Map<String, Object> payload = new HashMap<String, Object>();
+		payload.put("destination", destination);
+		payload.put("text", text);
+
 		try {
-			payload = Integer.valueOf(gateway.sendMessage(destination,text));
+			payload.put("code" , Integer.valueOf(gateway.sendMessage(destination,text)));
 		} catch(Exception e) {
-			payload = e.getLocalizedMessage();
+			payload.put("code", -1);
+			payload.put("error", e.getLocalizedMessage());
 			e.printStackTrace();
 		}
 		return payload;
