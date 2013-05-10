@@ -156,7 +156,7 @@
         <dependency>
             <groupId>org.mule.modules</groupId>
             <artifactId>mule-module-spring-config</artifactId>
-            <version>${mule.version}</version>
+            <version>3.3.1</version>
             <optional>true</optional>
         </dependency>
                         <dependency>
@@ -175,7 +175,7 @@
         <dependency>
             <groupId>org.mule.tests</groupId>
             <artifactId>mule-tests-functional</artifactId>
-            <version>${mule.version}</version>
+            <version>3.3.1</version>
         </dependency>
         <dependency>
             <groupId>org.mule.tools</groupId>
@@ -202,7 +202,13 @@
             <artifactId>commons-logging</artifactId>
             <version>1.1.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>mx.maleficarum</groupId>
+            <artifactId>calixta</artifactId>
+            <version>1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/SMSGatewayFull142.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <repositories>

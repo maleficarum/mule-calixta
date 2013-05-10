@@ -22,10 +22,10 @@ public class CalixtaCloudConnector {
 	}
 
     @Operation
-    public Object send(String destination, String message) {
+    public Object send(String destination, String text) {
 		Object payload = null;
 		try {
-			payload = gateway.sendMessage(destination,message);
+			payload = Integer.valueOf(gateway.sendMessage(destination,text));
 		} catch(Exception e) {
 			payload = e.getLocalizedMessage();
 			e.printStackTrace();
