@@ -3,16 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mx/maleficarum/calixta/CalixtaCloudConnector.java" afterPath="$PROJECT_DIR$/src/main/java/mx/maleficarum/calixta/CalixtaCloudConnector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mule-calixta.iws" afterPath="$PROJECT_DIR$/mule-calixta.iws" />
     </list>
     <ignored path="mule-calixta.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368211399288" ignored="false" />
-    <file path="/CalixtaCloudConnector.java" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368211529958" ignored="false" />
+    <file path="/Dummy.txt" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368321023280" ignored="false" />
+    <file path="/CalixtaCloudConnector.java" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368321997743" ignored="false" />
     <file path="/pom.xml" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368207500477" ignored="false" />
     <file path="$PROJECT_DIR$/target/generated-sources/mule/mx/maleficarum/calixta/config/CalixtaCloudConnectorNamespaceHandler.java" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368207762803" ignored="false" />
     <file path="$PROJECT_DIR$/target/generated-sources/mule/mx/maleficarum/calixta/config/SendOperationDefinitionParser.java" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368207762803" ignored="false" />
-    <file path="$PROJECT_DIR$/target/generated-sources/mule/mx/maleficarum/calixta/config/SendMessageProcessor.java" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368207762803" ignored="false" />
+    <file path="$PROJECT_DIR$/target/generated-sources/mule/mx/maleficarum/calixta/config/SendMessageProcessor.java" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368322051145" ignored="false" />
+    <file path="/README.md" changelist="9d0bab57-61ff-4eb6-8e79-e3024a54d65a" time="1368322131856" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +75,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CalixtaCloudConnector.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CalixtaCloudConnector.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mx/maleficarum/calixta/CalixtaCloudConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="34" selection-start="826" selection-end="826" vertical-scroll-proportion="0.49855492">
+            <state line="51" column="36" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#735#751#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#941#957#0" expanded="true" />
+                <element signature="e#1494#1510#0" expanded="true" />
+                <element signature="e#1551#1558#0" expanded="true" />
+                <element signature="e#2006#2022#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="40" selection-start="890" selection-end="890" vertical-scroll-proportion="0.7586705">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,6 +137,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/mx/maleficarum/calixta/CalixtaCloudConnector.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -164,7 +180,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -265,6 +280,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -451,7 +467,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#735#751#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#941#957#0" expanded="true" />
+            <element signature="e#1494#1510#0" expanded="true" />
+            <element signature="e#1551#1558#0" expanded="true" />
+            <element signature="e#2006#2022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="0" selection-start="7956" selection-end="8135" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CalixtaConfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mx/maleficarum/calixta/CalixtaCloudConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#941#957#0" expanded="true" />
+            <element signature="e#1494#1510#0" expanded="true" />
+            <element signature="e#1551#1558#0" expanded="true" />
+            <element signature="e#2006#2022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="0" selection-start="7956" selection-end="8135" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/CalixtaConfig.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mx/maleficarum/calixta/CalixtaCloudConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#941#957#0" expanded="true" />
+            <element signature="e#1494#1510#0" expanded="true" />
+            <element signature="e#1551#1558#0" expanded="true" />
+            <element signature="e#2006#2022#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -491,10 +565,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mx/maleficarum/calixta/CalixtaCloudConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="34" selection-start="826" selection-end="826" vertical-scroll-proportion="0.49855492">
+        <state line="51" column="36" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#735#751#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#941#957#0" expanded="true" />
+            <element signature="e#1494#1510#0" expanded="true" />
+            <element signature="e#1551#1558#0" expanded="true" />
+            <element signature="e#2006#2022#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="40" selection-start="890" selection-end="890" vertical-scroll-proportion="0.7586705">
+          <folding />
         </state>
       </provider>
     </entry>

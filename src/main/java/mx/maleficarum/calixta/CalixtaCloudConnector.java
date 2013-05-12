@@ -3,12 +3,16 @@
  */
 package mx.maleficarum.calixta;
 
+import com.auronix.calixta.EstadoMensaje;
+import com.auronix.calixta.Logs;
+import com.auronix.calixta.Saldo;
 import com.auronix.calixta.sms.SMSGateway;
 import org.mule.tools.cloudconnect.annotations.Connector;
 import org.mule.tools.cloudconnect.annotations.Operation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Sends SMS using Calixta (calixta.com.mx) service
@@ -19,6 +23,7 @@ import java.util.Map;
 public class CalixtaCloudConnector {
 
 	private SMSGateway gateway;
+	private final Logger logger = LoggerFactory.getLogger(getClass());
 
 	public CalixtaCloudConnector() {
 		gateway = new SMSGateway();
@@ -31,12 +36,65 @@ public class CalixtaCloudConnector {
 		payload.put("text", text);
 
 		try {
-			payload.put("code" , Integer.valueOf(gateway.sendMessage(destination,text)));
+			if(logger.isDebugEnabled()) {
+				logger.debug("Trying to send '{}' to {}", text, destination);
+			}
+			payload.put("code", 1);
+			payload.put("id" , Integer.valueOf(gateway.sendMessage(destination,text)));
 		} catch(Exception e) {
 			payload.put("code", -1);
 			payload.put("error", e.getLocalizedMessage());
 			e.printStackTrace();
 		}
+
 		return payload;
     }
+
+	@Operation
+	public Object getBalance() {
+		Map<String, Object> payload = new HashMap<String, Object>();
+		List<Saldo> saldos =  new ArrayList<Saldo>();
+		try {
+			payload.put("code", 1);
+
+			Collection c = gateway.getSaldos();
+
+			while(c.iterator().hasNext()) {
+				saldos.add((Saldo) c.iterator().next());
+			}
+
+			payload.put("saldos", saldos);
+		} catch(Exception e) {
+			payload.put("code", -1);
+			payload.put("error", e.getLocalizedMessage());
+			e.printStackTrace();
+		}
+
+		return payload;
+	}
+
+	@Operation
+	public Object getStatus(String ids) {
+		Map<String, Object> payload = new HashMap<String, Object>();
+		Logs logs = new Logs();
+
+		String[] sids = ids.split(",");
+		int[] iids = new int[sids.length];
+
+		for(int i = 0 ; i < sids.length ; i++) {
+			iids[i] = Integer.parseInt(sids[i]);
+		}
+
+		try {
+			payload.put("code", 1);
+			EstadoMensaje[] mensajes = logs.getEstadosMensajes(iids);
+			payload.put("messages", mensajes);
+		} catch(Exception e) {
+			payload.put("code", -1);
+			payload.put("error", e.getLocalizedMessage());
+			e.printStackTrace();
+		}
+
+		return payload;
+	}
 }

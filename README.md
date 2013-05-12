@@ -27,6 +27,13 @@ To send SMS's to multiple destinations:
 
 	<calixta:send destination="NUMBER1,NUMBER2" text="The SMS body" />
 
+To retrieve all available balance :
+
+	<calixta:get-balance />
+
+To retrieve SMS status by SMS id :
+
+	<calixta:get-status ids="ID1,ID2,ID3" />
 
 #### Maven integration
 =============
