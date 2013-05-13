@@ -58,9 +58,10 @@ public class CalixtaCloudConnector {
 			payload.put("code", 1);
 
 			Collection c = gateway.getSaldos();
+			Iterator iterator = c.iterator();
 
-			while(c.iterator().hasNext()) {
-				saldos.add((Saldo) c.iterator().next());
+			while(iterator.hasNext()) {
+				saldos.add((Saldo) iterator.next());
 			}
 
 			payload.put("saldos", saldos);
